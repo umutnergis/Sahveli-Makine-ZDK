@@ -856,7 +856,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
             	UGN3DR=1;
 				NextionSetText(&nextion, &t33, "Aktif");
         	    flashData.UGN3DR = 1;
-                FlashData_Write(&flashData);  // Flash'e kaydet
+                FlashData_Write(&flashData);
 
             }
 
@@ -864,21 +864,21 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
             	UGN4DR=0;
 				NextionSetText(&nextion, &t34, "Pasif");
         	    flashData.UGN4DR = 0;
-                FlashData_Write(&flashData);  // Flash'e kaydet
+                FlashData_Write(&flashData);
 
             }
             else if (strcmp((char*)rx_buffer, "UGN4-1") == 0) {
             	UGN4DR=1;
 				NextionSetText(&nextion, &t34, "Aktif");
         	    flashData.UGN4DR = 1;
-                FlashData_Write(&flashData);  // Flash'e kaydet
+                FlashData_Write(&flashData);
 
             }
             else if (strcmp((char*)rx_buffer, "UGN5-0") == 0) {
             	UGN5DR=0;
 				NextionSetText(&nextion, &t35, "Pasif");
         	    flashData.UGN5DR = 0;
-                FlashData_Write(&flashData);  // Flash'e kaydet
+                FlashData_Write(&flashData);
 
             }
             else if (strcmp((char*)rx_buffer, "UGN5-1") == 0) {
